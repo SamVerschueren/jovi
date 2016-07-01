@@ -26,7 +26,8 @@ const result = jovi.encrypt('unicorns', key)
 }
 */
 
-jovi.decrypt(result.hash, key, result.iv);
+const buf = jovi.decrypt(result.hash, key, result.iv);
+console.log(buf.toString('utf8'));
 //=> 'unicorns'
 ```
 
@@ -34,6 +35,8 @@ jovi.decrypt(result.hash, key, result.iv);
 ## API
 
 ### jovi.encrypt(data, key)
+
+Returns an object with an `iv` and the `hash`.
 
 #### data
 
@@ -50,6 +53,8 @@ Type: `buffer`
 Key to encrypt the data with.
 
 ### jovi.decrypt(data, key, iv)
+
+Returns a `buffer` with the decrypted data.
 
 #### data
 
