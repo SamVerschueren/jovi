@@ -1,0 +1,37 @@
+{
+  "name": "jovi",
+  "version": "0.0.0",
+  "description": "Encrypt and decrypt data with AES-256-CTR",
+  "license": "MIT",
+  "repository": "SamVerschueren/jovi",
+  "author": {
+    "name": "Sam Verschueren",
+    "email": "sam.verschueren@gmail.com",
+    "url": "github.com/SamVerschueren"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "clinton && xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "aes",
+    "ctr",
+    "iv",
+    "rijndael"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "clinton": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
