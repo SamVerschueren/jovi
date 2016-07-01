@@ -1,6 +1,6 @@
 {
   "name": "jovi",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Encrypt and decrypt data with AES-256-CTR",
   "license": "MIT",
   "repository": "SamVerschueren/jovi",
