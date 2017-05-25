@@ -30,8 +30,5 @@
     "ava": "*",
     "clinton": "*",
     "xo": "*"
-  },
-  "xo": {
-    "esnext": true
   }
 }

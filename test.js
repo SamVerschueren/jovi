@@ -1,9 +1,9 @@
 import test from 'ava';
 import m from './';
 
-const data = new Buffer('20ea986f64b12235', 'hex');
-const key = new Buffer('3c491ad9251904bf02a198027a6090d3c0db07a890d84c3302cd59190ca6b230', 'hex');
-const iv = new Buffer('b44044a9f23d9beacd509c0a85b11f0c', 'hex');
+const data = Buffer.from('20ea986f64b12235', 'hex');
+const key = Buffer.from('3c491ad9251904bf02a198027a6090d3c0db07a890d84c3302cd59190ca6b230', 'hex');
+const iv = Buffer.from('b44044a9f23d9beacd509c0a85b11f0c', 'hex');
 
 test('errors', t => {
 	t.throws(() => m.encrypt(1, key), 'Expected `data` to be a `buffer` or a `string`, got `number`');
@@ -21,8 +21,8 @@ test('encrypt', t => {
 });
 
 test('decrypt', t => {
-	const data = new Buffer('20ea986f64b12235', 'hex');
-	const iv = new Buffer('b44044a9f23d9beacd509c0a85b11f0c', 'hex');
+	const data = Buffer.from('20ea986f64b12235', 'hex');
+	const iv = Buffer.from('b44044a9f23d9beacd509c0a85b11f0c', 'hex');
 
 	t.is(m.decrypt(data, key, iv).toString('utf8'), 'unicorns');
 });
